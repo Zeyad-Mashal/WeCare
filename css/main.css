@@ -321,6 +321,7 @@ ul {
   font-size: 1.5rem;
 }
 .story_number_box span {
+  text-align: center;
   color: #535353;
   font-size: 0.9rem;
 }
