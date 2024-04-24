@@ -35,6 +35,7 @@ ul {
   color: #122853;
   font-weight: 700;
   font-size: 1.4rem;
+  text-decoration: none;
 }
 .logo span {
   background-color: #014dd5;
@@ -51,14 +52,51 @@ ul {
   margin-right: auto;
   margin-left: 40px;
 }
+.dropdown_btn {
+  position: relative;
+}
+.dropmenu {
+  display: none;
+  background-color: #e4e4e4;
+  box-shadow: 4px 5px 5px #e9e9e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin-top: 1rem;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  top: -100%;
+}
+.dropmenu.show {
+  top: 10%;
+}
+.dropmenu a {
+  padding: 10px;
+}
 .menu li a {
   margin: 0px 20px;
   color: #303030;
   font-weight: 500;
   transition: 0.3s ease;
+  text-decoration: none;
 }
 .menu li a:hover {
   color: #014dd5;
+}
+.dropdown-center {
+  width: 100%;
+}
+.menu li .dropdown-center a {
+  margin: 0;
+}
+.dropdown-menu {
+  text-align: center;
+}
+.dropdown-center .btn.show {
+  border: none;
 }
 .nav-emergency-btn {
   height: 45px;
@@ -803,18 +841,19 @@ footer {
 @media screen and (max-width: 950px) {
   .navbar {
     justify-content: space-between;
-    padding: 20px;
-    width: 100%;
+
     position: relative;
+    width: 100%;
   }
   .logo,
   .nav-emergency-btn,
   .menu_btn {
     z-index: 103;
+    margin: 0 20px;
   }
   .logo {
     margin-right: auto;
-    margin-left: 20px;
+    margin-left: 0;
   }
   .footer_container .logo {
     margin-left: 0;
@@ -851,12 +890,24 @@ footer {
     align-items: center;
     padding: 20px;
     margin: 0px;
+    justify-content: center;
     /* height: 45px; */
+  }
+  .dropdown-center {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropdown-menu.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .menu_icon {
     cursor: pointer;
     float: right;
-    padding: 10px 0px;
+    padding: 10px 20px;
     position: relative;
     user-select: none;
     z-index: 106;
