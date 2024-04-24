@@ -893,8 +893,7 @@ footer {
     justify-content: center;
     /* height: 45px; */
   }
-  .dropdown-center {
-    max-width: 100%;
+  .menu_dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
